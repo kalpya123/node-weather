@@ -7,6 +7,7 @@ const forcast=require('./utils/forcast')//path of forcast
 //const request= require('request')
 
 const app = express()//express
+const port=process.env.PORT || 3000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')//path of the directory
@@ -116,6 +117,6 @@ res.render('404',{
 
 })
 
-app.listen(3000, () => {//to start server 
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {//to start server 
+    console.log('Server is up on port '+ port)
 })
